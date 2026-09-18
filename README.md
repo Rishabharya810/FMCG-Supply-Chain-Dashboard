@@ -1,14 +1,14 @@
 # AtliQ Mart — Supply Chain Service-Level Dashboard
 
-**End-to-end supply-chain analytics: 6 CSV tables → Power Query star schema → 19 DAX measures → 6-page Power BI dashboard — with verified numbers and root-cause insights.**
+**End-to-end supply-chain analytics: 6 CSV tables → Power Query star schema → 19 DAX measures → 5-page Power BI dashboard — with verified numbers and root-cause insights.**
 
 ---
 
 ## Live Dashboard
 
 <!-- After publishing to Power BI Service: replace the placeholder below with a screenshot in assets/ and add your Publish-to-web link -->
-![Overview page](assets/02-overview.png)
-*Six pages: operational Dashboard, executive Overview, Customers with a watchlist, Trends with month → week → day drill, Products with LIFR/VOFR sparklines, and Definitions & Data Model.*
+![Overview page](assets/01-overview.jpg)
+*Five pages: executive Overview, Customers with a watchlist, Trends with month → week → day drill, Products with LIFR/VOFR sparklines, and Definitions & Data Model.*
 <!-- Link: [View the interactive dashboard](https://app.powerbi.com/...) -->
 
 ## Business Problem
@@ -24,7 +24,7 @@ contracts, citing late and incomplete deliveries. The overarching question:
 
 The dashboard tracks the five standard service-level KPIs — **OT%, IF%, OTIF%,
 LIFR, VOFR** — for every customer against their negotiated targets, and answers
-it through six pages of root-cause views.
+it through five pages of root-cause views.
 
 ## Key Findings
 
@@ -63,7 +63,9 @@ for this dataset, validating the metric definitions. Full measure reference:
 
 Cleaning (BOM characters, two date formats, capitalization, column renames) →
 star-schema model (six single-direction relationships, no fact-to-fact joins)
-→ 19 explicit DAX measures → one-page dashboard → six-page restructure.
+→ 19 explicit DAX measures → one-page dashboard → five-page restructure (the
+original page was split into dedicated pages and retired once every element
+was covered elsewhere).
 Problems hit and decisions taken are recorded in
 [`docs/PROJECT_JOURNAL.md`](docs/PROJECT_JOURNAL.md) — including why the
 fact-to-fact `order_id` relationship was deleted and why the targets
@@ -85,7 +87,7 @@ data/ — 6 challenge CSVs (31,729 orders · 57,096 order lines · Mar–Aug 202
         ▼  19 DAX measures
    KPIs · targets · gaps (pts) · conditional colors · metric switcher
         │
-        ▼  Power BI Desktop — 6-page dashboard
+        ▼  Power BI Desktop — 5-page dashboard
    KPI cards · city & customer matrices · drillable trend · sparklines
 ```
 

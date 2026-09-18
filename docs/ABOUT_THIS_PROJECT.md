@@ -18,11 +18,8 @@ to new cities.
 
 ## The dashboard
 
-Six pages, one story:
+Five pages, one story:
 
-- **Dashboard** — the operational overview: KPI cards vs targets, gap cards,
-  a metric switcher, city and customer matrices with gap-based conditional
-  formatting, and a month → week → day drillable trend chart.
 - **Overview** — executive summary: all five KPIs against targets, city split,
   and the monthly OTIF trend.
 - **Customers** — account-level matrix (OT / IF / OTIF / LIFR / VOFR) and a

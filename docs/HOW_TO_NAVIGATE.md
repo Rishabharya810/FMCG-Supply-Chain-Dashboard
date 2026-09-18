@@ -5,13 +5,6 @@
 The five service-level KPIs against targets, the city split, and the monthly
 OTIF trend. Start here for the one-screen answer to "how are we doing?"
 
-## Dashboard (deep dive)
-
-The operational page. Use the **metric switcher** (OT / IF / OTIF / LIFR / VOFR)
-to change what the trend chart and the selected-metric card show. Click the
-drill buttons on the trend chart to move **month → week → day**. The customer
-matrix uses gap-based conditional formatting so problem accounts jump out.
-
 ## Customers
 
 Account-level matrix with On Time %, In Full %, OTIF %, Line Fill Rate % and

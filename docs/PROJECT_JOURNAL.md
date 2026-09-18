@@ -63,18 +63,25 @@ table.
 
 ## Phase 5 — Multi-page restructure
 
-The single page became six, each with one job:
+The single page became five, each with one job:
 
-1. **Dashboard** — the original operational build: gap cards, metric
-   switcher, drillable trend, city & customer matrices
-2. **Overview** — executive readout, all five KPIs vs targets, monthly trend
-3. **Customers** — account matrix + city benchmark watchlist
-4. **Trends** — the monthly OTIF vs target signal with the metric switcher
-5. **Products** — LIFR & VOFR by product with sparklines
-6. **Info** — metric definitions, data model notes, key insights
+1. **Overview** — executive readout, all five KPIs vs targets, monthly trend
+2. **Customers** — account matrix + city benchmark watchlist
+3. **Trends** — the monthly OTIF vs target signal with the metric switcher
+4. **Products** — LIFR & VOFR by product with sparklines
+5. **Info** — metric definitions, data model notes, key insights
 
 Visuals were migrated between pages with copy-paste (Ctrl+C on the source
 page → Ctrl+V on the target page), then the originals were deleted.
+
+**Final decision — the original Dashboard page was removed.** After the split,
+every element on it was already covered elsewhere (KPI cards and city table on
+Overview, customer matrix on Customers, metric switcher and drillable trend on
+Trends, product table on Products), so keeping it meant a page that was ~95%
+duplicate. The only unique element — the three gap cards (OT −27.1, IF −23.7,
+OTIF −36.9 pts) — was moved to the Overview page, and the page itself was
+deleted. Deleting a page removes only its visuals; all tables and measures are
+untouched.
 
 ## Final verified numbers
 
