@@ -6,10 +6,10 @@
 
 ## Live Dashboard
 
-<!-- After publishing to Power BI Service: replace the placeholder below with a screenshot in assets/ and add your Publish-to-web link -->
+**Interactive report:** [Open the dashboard in Power BI Service](https://app.powerbi.com/groups/me/reports/27c58f23-54a1-4292-91fe-542981114c14/69f5a86c745acbbbc2e4?experience=power-bi)
+
 ![Overview page](assets/01-overview.jpg)
 *Five pages: executive Overview, Customers with a watchlist, Trends with month → week → day drill, Products with LIFR/VOFR sparklines, and Definitions & Data Model.*
-<!-- Link: [View the interactive dashboard](https://app.powerbi.com/...) -->
 
 ## Business Problem
 
