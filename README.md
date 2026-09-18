@@ -54,10 +54,20 @@ matrix cell by its gap to target (green ≥ target, amber within 10 pts, orange
 within 25, red beyond).
 
 **Verification:** every figure in the dashboard and this README was recomputed
-from the raw CSVs with `scripts/analysis.py` (pandas). The headline LIFR 65.96%
-and VOFR 96.59% reproduce the values widely cited for this dataset, validating
-the metric definitions. Full measure reference:
+from the raw CSVs during the build (chart data exported and checked by hand).
+The headline LIFR 65.96% and VOFR 96.59% reproduce the values widely cited
+for this dataset, validating the metric definitions. Full measure reference:
 [`docs/MEASURES.md`](docs/MEASURES.md)
+
+## How this was built
+
+Cleaning (BOM characters, two date formats, capitalization, column renames) →
+star-schema model (six single-direction relationships, no fact-to-fact joins)
+→ 19 explicit DAX measures → one-page dashboard → six-page restructure.
+Problems hit and decisions taken are recorded in
+[`docs/PROJECT_JOURNAL.md`](docs/PROJECT_JOURNAL.md) — including why the
+fact-to-fact `order_id` relationship was deleted and why the targets
+relationship is single-direction.
 
 ## Pipeline
 
@@ -77,9 +87,6 @@ data/ — 6 challenge CSVs (31,729 orders · 57,096 order lines · Mar–Aug 202
         │
         ▼  Power BI Desktop — 6-page dashboard
    KPI cards · city & customer matrices · drillable trend · sparklines
-        │
-        ▼  Independent verification (pandas)
-   scripts/analysis.py · scripts/verify_data.py (official checksums)
 ```
 
 ## Repository Structure
@@ -87,21 +94,18 @@ data/ — 6 challenge CSVs (31,729 orders · 57,096 order lines · Mar–Aug 202
 ```
 ├── README.md
 ├── LICENSE                          # MIT (this repo)
-├── requirements.txt
 ├── .gitignore
 ├── data/                            # 6 challenge CSVs (source of truth)
 │   ├── dim_customers.csv · dim_date.csv · dim_products.csv · dim_targets_orders.csv
 │   └── fact_order_lines.csv · fact_orders_aggregate.csv
 ├── powerbi/
 │   └── AtliQ-Mart-Supply-Chain-Service-Levels-Dashboard.pbix
-├── scripts/
-│   ├── analysis.py                  # reproduces every KPI & chart (pandas)
-│   └── verify_data.py               # checks data/ against the official dataset
-├── assets/                          # page screenshots
+├── assets/                          # page screenshots (dashboard preview)
 ├── docs/
 │   ├── ABOUT_THIS_PROJECT.md
 │   ├── HOW_TO_NAVIGATE.md
-│   └── MEASURES.md                  # DAX measure reference
+│   ├── MEASURES.md                  # DAX measure reference
+│   └── PROJECT_JOURNAL.md           # how it was built — problems & decisions
 ```
 
 ## Tech Stack
@@ -110,19 +114,17 @@ data/ — 6 challenge CSVs (31,729 orders · 57,096 order lines · Mar–Aug 202
 |---|---|
 | Cleaning & shaping | Power Query (M) |
 | Modeling & measures | Power BI Desktop (star schema + DAX) |
-| Verification | Python (pandas, numpy, matplotlib, seaborn) |
-| Documentation | Markdown docs + DAX measure reference |
+| Documentation | Markdown docs + project journal |
 
-## How to Reproduce
+## How to Open
 
-1. **Clone the repo** and install dependencies: `pip install -r requirements.txt`
-2. **Verify the data:** `python scripts/verify_data.py` (compares every CSV to
-   the official Codebasics challenge checksums; exit 0 = identical)
-3. **Regenerate the numbers:** `python scripts/analysis.py` — writes KPI
-   summaries, breakdowns, and charts into `scripts/`
-4. **Open the dashboard:** `powerbi/AtliQ-Mart-Supply-Chain-Service-Levels-Dashboard.pbix`
-   in Power BI Desktop (the data is already loaded; the CSVs are only needed to
-   rebuild or refresh the model)
+1. Install [Power BI Desktop](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop)
+   (free, Windows).
+2. Open `powerbi/AtliQ-Mart-Supply-Chain-Service-Levels-Dashboard.pbix`.
+3. Start on **Overview**, then follow `docs/HOW_TO_NAVIGATE.md`.
+
+> The CSV files in `data/` are only needed if you want to rebuild or refresh
+> the model — the .pbix already contains the loaded data.
 
 Sanity checks: **OT 59.0% · IF 52.8% · OTIF 29.0% · LIFR 66.0% · VOFR 96.6%** ·
 31,729 orders · 57,096 lines · 35 customers · 18 products.

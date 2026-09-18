@@ -48,8 +48,7 @@ Six CSVs provided with the challenge (also included in `data/`):
 | `dim_targets_orders` | 35 | Dimension — per-customer OT/IF/OTIF targets |
 
 Data window: **01-Mar-2022 to 31-Aug-2022**. Every figure in the dashboard was
-independently verified against the raw data with a reproducible Python (pandas)
-script.
+verified against the raw data during the build (chart exports checked by hand).
 
 ## Verified headline numbers
 
