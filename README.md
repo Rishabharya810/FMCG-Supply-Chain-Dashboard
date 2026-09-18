@@ -4,11 +4,18 @@
 
 ---
 
-## Live Dashboard
+## Dashboard Preview
 
-**Interactive report:** [Open the dashboard in Power BI Service](https://app.powerbi.com/groups/me/reports/27c58f23-54a1-4292-91fe-542981114c14/69f5a86c745acbbbc2e4?experience=power-bi)
+All five pages of the report (click any image to enlarge):
 
-![Overview page](assets/01-overview.jpg)
+| Overview | Customer Performance | Trends |
+|---|---|---|
+| <img src="assets/01-overview.jpg" width="360"> | <img src="assets/02-customer-performance.jpg" width="360"> | <img src="assets/03-trends.jpg" width="360"> |
+
+| Product Insights | Definitions & Data Model |
+|---|---|
+| <img src="assets/04-product-insights.jpg" width="360"> | <img src="assets/05-definitions-data-model.jpg" width="360"> |
+
 *Five pages: executive Overview, Customers with a watchlist, Trends with month → week → day drill, Products with LIFR/VOFR sparklines, and Definitions & Data Model.*
 
 ## Business Problem
