@@ -6,17 +6,10 @@
 
 ## Dashboard Preview
 
-All five pages of the report (click any image to enlarge):
+![Overview page](assets/01-overview.jpg)
 
-| Overview | Customer Performance | Trends |
-|---|---|---|
-| <img src="assets/01-overview.jpg" width="360"> | <img src="assets/02-customer-performance.jpg" width="360"> | <img src="assets/03-trends.jpg" width="360"> |
-
-| Product Insights | Definitions & Data Model |
-|---|---|
-| <img src="assets/04-product-insights.jpg" width="360"> | <img src="assets/05-definitions-data-model.jpg" width="360"> |
-
-*Five pages: executive Overview, Customers with a watchlist, Trends with month → week → day drill, Products with LIFR/VOFR sparklines, and Definitions & Data Model.*
+**Full report with all five pages, the complete analysis, and the DAX appendix:**
+[AtliQ Mart Supply Chain Service-Level Report (PDF)](report/AtliQ_Mart_Supply_Chain_Report.pdf)
 
 ## Business Problem
 
@@ -136,7 +129,9 @@ data/ — 6 challenge CSVs (31,729 orders · 57,096 order lines · Mar–Aug 202
 │   └── fact_order_lines.csv · fact_orders_aggregate.csv
 ├── powerbi/
 │   └── AtliQ-Mart-Supply-Chain-Service-Levels-Dashboard.pbix
-├── assets/                          # page screenshots (dashboard preview)
+├── report/
+│   └── AtliQ_Mart_Supply_Chain_Report.pdf    # full report with all page screenshots
+├── assets/                          # page screenshots (used by the PDF + README preview)
 ├── docs/
 │   ├── ABOUT_THIS_PROJECT.md
 │   ├── HOW_TO_NAVIGATE.md
