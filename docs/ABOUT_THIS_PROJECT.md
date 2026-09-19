@@ -20,16 +20,38 @@ to new cities.
 
 Five pages, one story:
 
-- **Overview** — executive summary: all five KPIs against targets, city split,
-  and the monthly OTIF trend.
-- **Customers** — account-level matrix (OT / IF / OTIF / LIFR / VOFR) and a
-  watchlist of the lowest-OTIF accounts.
-- **Trends** — monthly OTIF vs target with a metric switcher and drill from
-  months down to days.
-- **Products** — LIFR and VOFR by product with date sparklines, filterable by
-  category.
-- **Definitions & Data Model** — metric definitions, star-schema documentation,
-  and the key insights.
+### Overview
+
+Executive summary: all five KPIs against targets, the city split, and the
+monthly OTIF trend.
+
+<img src="../assets/01-overview.jpg" width="640">
+
+### Customer Performance
+
+Account-level matrix (OT / IF / OTIF / LIFR / VOFR) and a watchlist of the
+lowest-OTIF accounts.
+
+<img src="../assets/02-customer-performance.jpg" width="640">
+
+### Trends
+
+Monthly OTIF vs target with a metric switcher and drill from months down to
+days.
+
+<img src="../assets/03-trends.jpg" width="640">
+
+### Product Insights
+
+LIFR and VOFR by product with date sparklines, filterable by category.
+
+<img src="../assets/04-product-insights.jpg" width="640">
+
+### Definitions & Data Model
+
+Metric definitions, star-schema documentation, and the key insights.
+
+<img src="../assets/05-definitions-data-model.jpg" width="640">
 
 ## Data
 
