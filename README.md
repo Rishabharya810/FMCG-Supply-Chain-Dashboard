@@ -1,6 +1,6 @@
 # AtliQ Mart — Supply Chain Service-Level Dashboard
 
-**End-to-end supply-chain analytics: 6 CSV tables → Power Query star schema → 19 DAX measures → 5-page Power BI dashboard — with verified numbers and root-cause insights.**
+**GitHub Main Project (2nd Portfolio Project)** | **End-to-end supply-chain analytics: 6 CSV tables → Power Query star schema → 19 DAX measures → 5-page Power BI dashboard — with verified numbers and root-cause insights.**
 
 ---
 
@@ -165,6 +165,8 @@ Sanity checks: **OT 59.0% · IF 52.8% · OTIF 29.0% · LIFR 66.0% · VOFR 96.6%*
 - **Scenario & data:** Codebasics Resume Project Challenge #2 — AtliQ Mart
   (codebasics.io). Metric definitions follow the challenge brief; the dashboard
   design, analysis, and insights are my own work.
+
+- **First portfolio project:** See [Customer Behavior Analysis](https://github.com/Rishabharya810/customer-shopping-trends-analysis) — pandas→PostgreSQL ETL + Power BI Excel-style multi-page dashboard.
 
 ## Author
 
