@@ -53,18 +53,45 @@ fixes in Vadodara, the weakest and highest-volume city.
 
 ## Dashboard & DAX Measures
 
-The model uses explicit DAX measures throughout — no implicit aggregations —
-including the five service-level KPIs, per-customer targets, gap measures in
-percentage points, and a disconnected `Metrics` table that powers a metric
-switcher on the trend charts. Conditional formatting colors every customer
-matrix cell by its gap to target (green ≥ target, amber within 10 pts, orange
-within 25, red beyond).
+The model uses **19 explicit DAX measures** — no implicit aggregations — covering
+the five service-level KPIs, per-customer targets, gaps in percentage points,
+gap-based conditional colors, and a disconnected `Metrics` table that powers the
+metric switcher on the trend charts. A taste of the DAX:
+
+```dax
+OTIF % = DIVIDE ( SUM ( fact_orders_aggregate[otif] ), [Total Orders] )
+
+OTIF Gap = ( [OTIF %] - [OTIF Target %] ) * 100
+
+OTIF Gap Color =
+VAR GapPoints = [OTIF Gap]
+RETURN
+    SWITCH ( TRUE (),
+        GapPoints >= 0,   "#63BE7B",   -- green  (at/above target)
+        GapPoints >= -10, "#FFEB84",   -- yellow (within 10 pts)
+        GapPoints >= -25, "#FDAE61",   -- orange (within 25 pts)
+        "#F8696B"                      -- red    (beyond 25 pts)
+    )
+
+Selected Metric Value =
+SWITCH ( SELECTEDVALUE ( Metrics[Metric] ),
+    "OT %",   [On Time %],
+    "IF %",   [In Full %],
+    "OTIF %", [OTIF %],
+    "LIFR %", [Line Fill Rate %],
+    "VOFR %", [Volume Fill Rate %],
+    BLANK ()
+)
+```
+
+Conditional formatting colors every customer-matrix cell by its gap to target
+(green ≥ target, amber within 10 pts, orange within 25, red beyond).
 
 **Verification:** every figure in the dashboard and this README was recomputed
 from the raw CSVs during the build (chart data exported and checked by hand).
 The headline LIFR 65.96% and VOFR 96.59% reproduce the values widely cited
-for this dataset, validating the metric definitions. Full measure reference:
-[`docs/MEASURES.md`](docs/MEASURES.md)
+for this dataset, validating the metric definitions. **Full DAX reference for
+all 19 measures:** [`docs/MEASURES.md`](docs/MEASURES.md)
 
 ## How this was built
 
