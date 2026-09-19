@@ -166,7 +166,7 @@ Sanity checks: **OT 59.0% · IF 52.8% · OTIF 29.0% · LIFR 66.0% · VOFR 96.6%*
   (codebasics.io). Metric definitions follow the challenge brief; the dashboard
   design, analysis, and insights are my own work.
 
-- **First portfolio project:** See [Customer Behavior Analysis](https://github.com/Rishabharya810/customer-shopping-trends-analysis) — pandas→PostgreSQL ETL + Power BI Excel-style multi-page dashboard.
+- **First portfolio project:** See [Customer Shopping Trends Analysis](https://github.com/Rishabharya810/Customer-Shopping-Trends-Analysis) — pandas→PostgreSQL ETL + Power BI Desktop dashboard (DAX measures).
 
 ## Author
 
