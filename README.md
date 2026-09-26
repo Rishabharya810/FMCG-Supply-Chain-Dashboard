@@ -11,6 +11,9 @@
 **Full report with all five pages, the complete analysis, and the DAX appendix:**
 [AtliQ Mart Supply Chain Service-Level Report (PDF)](report/AtliQ_Mart_Supply_Chain_Report.pdf)
 
+**Executive slide deck (14 slides) — problem → build → dashboard tour → findings → recommendations:**
+[AtliQ Mart Supply Chain Executive Deck (PPTX)](report/AtliQ_Mart_Supply_Chain_Executive_Deck.pptx) · [PDF version](report/AtliQ_Mart_Supply_Chain_Executive_Deck.pdf)
+
 ## Business Problem
 
 AtliQ Mart, an FMCG manufacturer in Gujarat (India) serving retail chains across
@@ -130,7 +133,9 @@ data/ — 6 challenge CSVs (31,729 orders · 57,096 order lines · Mar–Aug 202
 ├── powerbi/
 │   └── AtliQ-Mart-Supply-Chain-Service-Levels-Dashboard.pbix
 ├── report/
-│   └── AtliQ_Mart_Supply_Chain_Report.pdf    # full report with all page screenshots
+│   ├── AtliQ_Mart_Supply_Chain_Report.pdf        # full report with all page screenshots
+│   ├── AtliQ_Mart_Supply_Chain_Executive_Deck.pptx # executive slide deck (14 slides)
+│   └── AtliQ_Mart_Supply_Chain_Executive_Deck.pdf  # PDF version of the deck
 ├── assets/                          # page screenshots (used by the PDF + README preview)
 ├── docs/
 │   ├── ABOUT_THIS_PROJECT.md
